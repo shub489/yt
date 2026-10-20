@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { YOUTUBE_VIDEOS_API } from '../utils/api'
+import VideoCard from './VideoCard'
 
 const VideoContainer = () => {
     const [videos, setVideos] = useState([])
@@ -18,8 +19,18 @@ const VideoContainer = () => {
         getVideos()
     }, [])
 
+    if (!videos.length) {
+        return <div>Loading...</div>
+    }
+
     return (
-        <div>VideoContainer</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 p-2">
+            {
+                videos.map((video) => {
+                    return <VideoCard key={video.id} info={video} />
+                })
+            }
+        </div>
     )
 }
 
