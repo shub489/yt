@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { HAMBURGER_ICON, YOUTUBE_LOGO } from '../utils/constant'
 import { Search, User } from 'lucide-react'
 import { useDispatch } from 'react-redux'
-import { handleSidebar } from '../redux/sidebarSlice'
+import { toggleSidebar } from '../redux/sidebarSlice'
+import { Link } from 'react-router-dom'
 
 const Header = ({ }) => {
 
@@ -18,13 +19,14 @@ const Header = ({ }) => {
                     className="h-6 cursor-pointer hover:opacity-75 transition-opacity"
                     src={HAMBURGER_ICON}
                     alt="Hamburger Menu"
-                    onClick={() => dispatch(handleSidebar())}
+                    onClick={() => dispatch(toggleSidebar())}
                 />
-                <img
-                    className="h-5 cursor-pointer object-contain"
-                    src={YOUTUBE_LOGO}
-                    alt="YouTube Logo"
-                />
+                <Link to="/">
+                    <img
+                        className="h-5 cursor-pointer object-contain"
+                        src={YOUTUBE_LOGO}
+                        alt="YouTube Logo"
+                    /></Link>
             </div>
 
             {/* Center section: Search Bar */}

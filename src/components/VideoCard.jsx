@@ -1,5 +1,6 @@
 import React from 'react'
 import { formatDuration, getTimeAgo } from '../utils/commanFunction'
+import { Link } from 'react-router-dom'
 
 const VideoCard = ({ info }) => {
 
@@ -29,36 +30,38 @@ const VideoCard = ({ info }) => {
     }
 
     return (
-        <div className="w-full cursor-pointer flex flex-col gap-2.5 group">
-            {/* Thumbnail & Duration */}
-            <div className="relative rounded-xl overflow-hidden aspect-video bg-gray-100">
-                <img
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
-                    src={thumbnail}
-                    alt={title}
-                />
-                <p className="absolute bottom-2 right-2 bg-black/80 text-white text-xs font-semibold px-1.5 py-0.5 rounded-md backdrop-blur-xs tracking-tight">
-                    {formatDuration(duration)}
-                </p>
-            </div>
-
-            {/* Video Details */}
-            <div className="flex flex-col gap-1 px-0.5">
-                <p className="font-semibold text-sm text-gray-900 line-clamp-2 leading-snug">
-                    {title}
-                </p>
-                <div className="text-xs text-gray-600 flex flex-col gap-0.5">
-                    <p className="hover:text-gray-900 transition-colors">
-                        {channelName}
+        <Link to={`/watch?v=${info.id}`}>
+            <div className="w-full cursor-pointer flex flex-col gap-2.5 group">
+                {/* Thumbnail & Duration */}
+                <div className="relative rounded-xl overflow-hidden aspect-video bg-gray-100">
+                    <img
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                        src={thumbnail}
+                        alt={title}
+                    />
+                    <p className="absolute bottom-2 right-2 bg-black/80 text-white text-xs font-semibold px-1.5 py-0.5 rounded-md backdrop-blur-xs tracking-tight">
+                        {formatDuration(duration)}
                     </p>
-                    <div className="flex items-center gap-1 text-gray-500">
-                        <span>{viewsData(views)} views</span>
-                        <span>•</span>
-                        <span>{getTimeAgo(uploadTime)}</span>
+                </div>
+
+                {/* Video Details */}
+                <div className="flex flex-col gap-1 px-0.5">
+                    <p className="font-semibold text-sm text-gray-900 line-clamp-2 leading-snug">
+                        {title}
+                    </p>
+                    <div className="text-xs text-gray-600 flex flex-col gap-0.5">
+                        <p className="hover:text-gray-900 transition-colors">
+                            {channelName}
+                        </p>
+                        <div className="flex items-center gap-1 text-gray-500">
+                            <span>{viewsData(views)} views</span>
+                            <span>•</span>
+                            <span>{getTimeAgo(uploadTime)}</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Link >
     )
 }
 
