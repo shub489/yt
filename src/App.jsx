@@ -1,7 +1,16 @@
 import { useState } from 'react'
+import Header from "./components/Header"
+import Main from './components/Main'
+import Body from './components/Body'
 
 export default function App() {
+
+
+
   return (
-    <div className='text-9xl text-red-700'>Hello world</div>
+    <div >
+      <Header />
+      <Body />
+    </div>
   )
 }
