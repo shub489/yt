@@ -13,7 +13,7 @@ const VideoCard = ({ info }) => {
 
 
 
-    console.log(info);
+    // console.log(info);
 
 
     function viewsData(viewsCount) {

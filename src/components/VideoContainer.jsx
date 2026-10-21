@@ -15,7 +15,7 @@ const VideoContainer = () => {
                 const response = await fetch(`${YOUTUBE_VIDEOS_API}`)
                 const data = await response.json()
                 setVideos(data.items)
-                console.log(data.items);
+                // console.log(data.items);
             } catch (error) {
                 console.log("error in fetching videos ", error)
             }
