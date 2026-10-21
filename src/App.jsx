@@ -5,6 +5,7 @@ import Body from './components/Body'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import WatchPage from './components/WatchPage';
 import AppLayout from './components/AppLayout';
+import Error from './components/Error';
 
 export default function App() {
 
@@ -12,6 +13,7 @@ export default function App() {
     {
       path: "/",
       element: <AppLayout />,
+      errorElement: <Error />,
       children: [
         {
           path: "/",

@@ -13,7 +13,6 @@ const VideoCard = ({ info }) => {
 
 
 
-    // console.log(thumbnail, title, channelName, views, uploadTime, duration);
     console.log(info);
 
 
@@ -21,9 +20,11 @@ const VideoCard = ({ info }) => {
         // case-1 if views count is 0-999
         if (viewsCount >= 0 && viewsCount <= 999)
             return `${viewsCount}`
+
         // case-2 if view count is 1000-999999
         if (viewsCount >= 1000 & viewsCount <= 999999)
             return `${(viewsCount / 1000).toFixed(1)}k`
+
         // case-3 if views count is 1000000-1000000000
         if (viewsCount >= 1000000 && viewsCount <= 1000000000)
             return `${(viewsCount / 1000000).toFixed(1)}M`
@@ -64,5 +65,7 @@ const VideoCard = ({ info }) => {
         </Link >
     )
 }
+
+
 
 export default VideoCard
