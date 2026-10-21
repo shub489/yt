@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { HAMBURGER_ICON, YOUTUBE_LOGO } from '../utils/constant'
 import { Search, User, X } from 'lucide-react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { toggleSidebar } from '../redux/sidebarSlice'
 import { Link } from 'react-router-dom'
 import { YOUTUBE_SEARCH_SUGGESTIONS_API } from '../utils/api'
+import { cacheResults } from '../redux/searchSlice'
 
 const Header = ({ }) => {
     const [search, setSearch] = useState("")
     const [searchResult, setSearchResult] = useState([])
     const dispatch = useDispatch()
+    const searchCacheData = useSelector((state) => state.searchCache)
 
-    console.log("re-render");
 
 
     // Handle search
@@ -33,6 +34,7 @@ const Header = ({ }) => {
             const result = await response.json()
             console.log("result search ", result);
             setSearchResult(result[1])
+            dispatch(cacheResults({ query: search, result: result[1] }))
 
         } catch (error) {
             console.log("error in fetching result ", error);
@@ -47,7 +49,14 @@ const Header = ({ }) => {
             return
         }
 
-        // console.log("search ", search);
+        // Check in cache, if present then return from cache else make api call and add to cache
+        // console.log(Object.hasOwn(user, "name"));  // true
+
+        if (Object.hasOwn(searchCacheData, search)) {
+            setSearchResult(searchCacheData[search])
+            return
+        }
+
         const timer = setTimeout(() => {
             searchApiCall()
         }, 200)
