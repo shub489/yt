@@ -1,1 +1,329 @@
-export const commentsData = [{ name: "Shub", text: "I love Honda City!", replies: [{ name: "Rahul", text: "Honda City is a great car!", replies: [{ name: "Amit", text: "Yes, especially its comfort and mileage.", replies: [{ name: "Shub", text: "Exactly! The driving experience is amazing.", replies: [], }, { name: "Karan", text: "The new model looks amazing too!", replies: [], },], }, { name: "Priya", text: "What about the maintenance cost?", replies: [{ name: "Rahul", text: "It's reasonable if you maintain it properly.", replies: [], },], },], }, { name: "Neha", text: "I prefer Hyundai Verna over Honda City.", replies: [{ name: "Rahul", text: "Both are good, but I prefer Honda.", replies: [], }, { name: "Vikash", text: "Verna has better features in my opinion.", replies: [{ name: "Neha", text: "Yes, its interior is really good.", replies: [], },], },], }, { name: "Rohit", text: "Honda cars are reliable.", replies: [], },], }, { name: "Vikash", text: "This video is really helpful!", replies: [{ name: "Ankit", text: "Yes, I learned a lot from this.", replies: [{ name: "Vikash", text: "Glad it helped!", replies: [], },], }, { name: "Sneha", text: "Please make more videos like this.", replies: [{ name: "Vikash", text: "Absolutely! Looking forward to the next one.", replies: [{ name: "Sneha", text: "Subscribed to your channel!", replies: [], },], },], }, { name: "Aman", text: "Can you make a tutorial on React?", replies: [], },], }, { name: "Aman", text: "Can someone explain how this works?", replies: [{ name: "Rohit", text: "Sure! Let me explain it simply.", replies: [{ name: "Aman", text: "Thanks, now I understand!", replies: [], }, { name: "Priya", text: "I had the same question.", replies: [], },], }, { name: "Kunal", text: "Which part are you confused about?", replies: [{ name: "Aman", text: "The API integration part.", replies: [{ name: "Kunal", text: "You can use fetch or Axios for that.", replies: [{ name: "Aman", text: "Got it, thank you!", replies: [], },], },], },], },], }, { name: "Pooja", text: "First comment! ❤️", replies: [{ name: "Meera", text: "Welcome to the comments section!", replies: [], }, { name: "Tanya", text: "Haha, not anymore!", replies: [{ name: "Pooja", text: "😂😂", replies: [], },], },], }, { name: "Deepak", text: "JavaScript is awesome!", replies: [{ name: "Arjun", text: "Especially when you learn React.", replies: [{ name: "Deepak", text: "True! React makes UI development easier.", replies: [], }, { name: "Sahil", text: "And Node.js makes the backend possible.", replies: [{ name: "Arjun", text: "That's the beauty of the MERN stack.", replies: [], },], },], }, { name: "Nisha", text: "TypeScript is worth learning too.", replies: [], },], }, { name: "Priya", text: "Who is watching this in 2026?", replies: [{ name: "Mohit", text: "Me! Watching it today.", replies: [], }, { name: "Anjali", text: "Still relevant after all these years.", replies: [{ name: "Priya", text: "Exactly! Great content never gets old.", replies: [], },], },], }, { name: "Karan", text: "Please upload the next part soon.", replies: [{ name: "Ravi", text: "I am waiting for it too.", replies: [], }, { name: "Simran", text: "Same here! Can't wait.", replies: [{ name: "Karan", text: "Hopefully it comes out this week.", replies: [], },], },], }, { name: "Neha", text: "The explanation was very clear.", replies: [{ name: "Ishaan", text: "The examples made everything easier.", replies: [], }, { name: "Ritu", text: "Agreed! The practical approach is excellent.", replies: [{ name: "Neha", text: "That's why I love these tutorials.", replies: [], },], },], }, { name: "Saurabh", text: "Can you share the source code?", replies: [{ name: "Manish", text: "Check the GitHub repository.", replies: [{ name: "Saurabh", text: "Found it, thanks!", replies: [], },], },], }, { name: "Anjali", text: "This is the best tutorial I have watched.", replies: [{ name: "Rohit", text: "You should check out the other videos too.", replies: [], }, { name: "Meera", text: "I learned so much from this channel.", replies: [{ name: "Anjali", text: "Same! The teaching style is great.", replies: [], },], },], }, { name: "Mohit", text: "Can we build this using TypeScript?", replies: [{ name: "Aman", text: "Yes, absolutely!", replies: [{ name: "Mohit", text: "I'll try converting my project.", replies: [], },], },], },];
+export const commentsData = [
+    {
+        "name": "Shub",
+        "text": "I love Honda City!",
+        "replies": [
+            {
+                "name": "Rahul",
+                "text": "Honda City is a great car!",
+                "replies": [
+                    {
+                        "name": "Amit",
+                        "text": "Yes, especially its comfort and mileage.",
+                        "replies": [
+                            {
+                                "name": "Shub",
+                                "text": "Exactly! The driving experience is amazing.",
+                                "replies": []
+                            },
+                            {
+                                "name": "Karan",
+                                "text": "The new model looks amazing too!",
+                                "replies": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Priya",
+                        "text": "What about the maintenance cost?",
+                        "replies": [
+                            {
+                                "name": "Rahul",
+                                "text": "It's reasonable if you maintain it properly.",
+                                "replies": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Neha",
+                "text": "I prefer Hyundai Verna over Honda City.",
+                "replies": [
+                    {
+                        "name": "Rahul",
+                        "text": "Both are good, but I prefer Honda.",
+                        "replies": []
+                    },
+                    {
+                        "name": "Vikash",
+                        "text": "Verna has better features in my opinion.",
+                        "replies": [
+                            {
+                                "name": "Neha",
+                                "text": "Yes, its interior is really good.",
+                                "replies": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Rohit",
+                "text": "Honda cars are reliable.",
+                "replies": []
+            }
+        ]
+    },
+    {
+        "name": "Vikash",
+        "text": "This video is really helpful!",
+        "replies": [
+            {
+                "name": "Ankit",
+                "text": "Yes, I learned a lot from this.",
+                "replies": [
+                    {
+                        "name": "Vikash",
+                        "text": "Glad it helped!",
+                        "replies": []
+                    }
+                ]
+            },
+            {
+                "name": "Sneha",
+                "text": "Please make more videos like this.",
+                "replies": [
+                    {
+                        "name": "Vikash",
+                        "text": "Absolutely! Looking forward to the next one.",
+                        "replies": [
+                            {
+                                "name": "Sneha",
+                                "text": "Subscribed to your channel!",
+                                "replies": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Aman",
+                "text": "Can you make a tutorial on React?",
+                "replies": []
+            }
+        ]
+    },
+    {
+        "name": "Aman",
+        "text": "Can someone explain how this works?",
+        "replies": [
+            {
+                "name": "Rohit",
+                "text": "Sure! Let me explain it simply.",
+                "replies": [
+                    {
+                        "name": "Aman",
+                        "text": "Thanks, now I understand!",
+                        "replies": []
+                    },
+                    {
+                        "name": "Priya",
+                        "text": "I had the same question.",
+                        "replies": []
+                    }
+                ]
+            },
+            {
+                "name": "Kunal",
+                "text": "Which part are you confused about?",
+                "replies": [
+                    {
+                        "name": "Aman",
+                        "text": "The API integration part.",
+                        "replies": [
+                            {
+                                "name": "Kunal",
+                                "text": "You can use fetch or Axios for that.",
+                                "replies": [
+                                    {
+                                        "name": "Aman",
+                                        "text": "Got it, thank you!",
+                                        "replies": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Pooja",
+        "text": "First comment! ❤️",
+        "replies": [
+            {
+                "name": "Meera",
+                "text": "Welcome to the comments section!",
+                "replies": []
+            },
+            {
+                "name": "Tanya",
+                "text": "Haha, not anymore!",
+                "replies": [
+                    {
+                        "name": "Pooja",
+                        "text": "😂😂",
+                        "replies": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Deepak",
+        "text": "JavaScript is awesome!",
+        "replies": [
+            {
+                "name": "Arjun",
+                "text": "Especially when you learn React.",
+                "replies": [
+                    {
+                        "name": "Deepak",
+                        "text": "True! React makes UI development easier.",
+                        "replies": []
+                    },
+                    {
+                        "name": "Sahil",
+                        "text": "And Node.js makes the backend possible.",
+                        "replies": [
+                            {
+                                "name": "Arjun",
+                                "text": "That's the beauty of the MERN stack.",
+                                "replies": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Nisha",
+                "text": "TypeScript is worth learning too.",
+                "replies": []
+            }
+        ]
+    },
+    {
+        "name": "Priya",
+        "text": "Who is watching this in 2026?",
+        "replies": [
+            {
+                "name": "Mohit",
+                "text": "Me! Watching it today.",
+                "replies": []
+            },
+            {
+                "name": "Anjali",
+                "text": "Still relevant after all these years.",
+                "replies": [
+                    {
+                        "name": "Priya",
+                        "text": "Exactly! Great content never gets old.",
+                        "replies": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Karan",
+        "text": "Please upload the next part soon.",
+        "replies": [
+            {
+                "name": "Ravi",
+                "text": "I am waiting for it too.",
+                "replies": []
+            },
+            {
+                "name": "Simran",
+                "text": "Same here! Can't wait.",
+                "replies": [
+                    {
+                        "name": "Karan",
+                        "text": "Hopefully it comes out this week.",
+                        "replies": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Neha",
+        "text": "The explanation was very clear.",
+        "replies": [
+            {
+                "name": "Ishaan",
+                "text": "The examples made everything easier.",
+                "replies": []
+            },
+            {
+                "name": "Ritu",
+                "text": "Agreed! The practical approach is excellent.",
+                "replies": [
+                    {
+                        "name": "Neha",
+                        "text": "That's why I love these tutorials.",
+                        "replies": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Saurabh",
+        "text": "Can you share the source code?",
+        "replies": [
+            {
+                "name": "Manish",
+                "text": "Check the GitHub repository.",
+                "replies": [
+                    {
+                        "name": "Saurabh",
+                        "text": "Found it, thanks!",
+                        "replies": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Anjali",
+        "text": "This is the best tutorial I have watched.",
+        "replies": [
+            {
+                "name": "Rohit",
+                "text": "You should check out the other videos too.",
+                "replies": []
+            },
+            {
+                "name": "Meera",
+                "text": "I learned so much from this channel.",
+                "replies": [
+                    {
+                        "name": "Anjali",
+                        "text": "Same! The teaching style is great.",
+                        "replies": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Mohit",
+        "text": "Can we build this using TypeScript?",
+        "replies": [
+            {
+                "name": "Aman",
+                "text": "Yes, absolutely!",
+                "replies": [
+                    {
+                        "name": "Mohit",
+                        "text": "I'll try converting my project.",
+                        "replies": []
+                    }
+                ]
+            }
+        ]
+    }
+];

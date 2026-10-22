@@ -32,7 +32,7 @@ const Header = ({ }) => {
         try {
             const response = await fetch(`${YOUTUBE_SEARCH_SUGGESTIONS_API}&q=${search}`)
             const result = await response.json()
-            console.log("result search ", result);
+            // console.log("result search ", result);
             setSearchResult(result[1])
             dispatch(cacheResults({ query: search, result: result[1] }))
 
