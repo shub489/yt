@@ -51,4 +51,32 @@ export function formatDuration(duration) {
 
 }
 
-// how to export?
+const names = [
+    "Rahul", "Amit", "Priya", "Sneha", "Vikash",
+    "Ankit", "Neha", "Rohit", "Pooja", "Shubham",
+    "Aryan", "Karan", "Simran", "Aditya", "Riya"
+];
+
+const messages = [
+    "Hello everyone! 👋",
+    "Amazing video 🔥",
+    "Love this stream ❤️",
+    "Who is watching from India? 🇮🇳",
+    "First time here!",
+    "This is awesome 😂",
+    "Keep it up!",
+    "Great explanation 👍",
+    "Let's goooo 🔥🔥",
+    "Anyone watching in 2026?",
+    "Superb content!",
+    "I learned something new today.",
+    "Bro, this is next level 🚀",
+    "Haha 😂😂",
+    "Nice work!"
+];
+
+export function generateRandomChat() {
+    const randomName = names[Math.floor(Math.random() * names.length)];
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    return { name: randomName, message: randomMessage };
+}
